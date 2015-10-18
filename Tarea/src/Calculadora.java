@@ -46,10 +46,10 @@ public class Calculadora {
 				division(intro, num1, num2);
 				break;
 			case 5:
-				comparar(num1, num2);
+				System.out.println("El numero mayor es: " + comparar(intro, num1, num2));
 				break;
 			case 6:
-				potencia(num1, num2);
+				System.out.println("El resultado de la potencia es: " + potencia(intro, num1, num2));
 				break;
 			case 7:
 				salir(intro, num1);
@@ -81,7 +81,8 @@ public class Calculadora {
 		num1 = intro.nextInt();
 		num2 = intro.nextInt();
 		int multiplicacion = num1 * num2;
-		System.out.println("El resultado de la multipliacion es: " + multiplicacion);
+		System.out.println("El resultado de la multipliacion es: "
+				+ multiplicacion);
 	}
 
 	public static void division(Scanner intro, int num1, int num2) {
@@ -102,11 +103,17 @@ public class Calculadora {
 		System.out.println("El resultado de la division es: " + div);
 	}
 
-	public static int comparar(int num1, int num2) {
+	public static int comparar(Scanner intro, int num1, int num2) {
+		System.out.println("Ingrese numeros");
+		num1 = intro.nextInt();
+		num2 = intro.nextInt();
 		return Math.max(num1, num2);
 	}
 
-	public static int potencia(int num1, int num2) {
+	public static int potencia(Scanner intro, int num1, int num2) {
+		System.out.println("Ingrese numeros");
+		num1 = intro.nextInt();
+		num2 = intro.nextInt();
 		return (int) Math.pow(num1, num2);
 	}
 
